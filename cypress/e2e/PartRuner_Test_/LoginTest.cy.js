@@ -1,4 +1,4 @@
-import { loginPage } from "./PartRunner_Pages_/LoginPage"
+import { loginPage } from "../../PartRunner_Pages_/LoginPage"
 const loginobj = new loginPage()
 import LoginData from "../fixtures/LoginData.json"
 
