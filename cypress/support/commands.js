@@ -25,7 +25,14 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
+
+
 // type definitions for Cypress object "cy"
 /// <reference types="cypress" />
 
-
+Cypress.Commands.add('login' , (email , Password)=>{
+    cy.visit(Cypress.env('QAURL'))
+    cy.get('.mb-3 > .form-control').type(email)
+    cy.get('.position-relative > .form-control').type(Password)
+    cy.get('.d-flex > .btn').click()
+})
