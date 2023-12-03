@@ -32,6 +32,7 @@
 
 Cypress.Commands.add('login' , (email , Password)=>{
     cy.visit(Cypress.env('QAURL'))
+    cy.wait(4000)
     cy.get('.mb-3 > .form-control').type(email)
     cy.get('.position-relative > .form-control').type(Password)
     cy.get('.d-flex > .btn').click()

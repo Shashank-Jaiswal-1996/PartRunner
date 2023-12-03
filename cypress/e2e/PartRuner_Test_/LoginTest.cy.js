@@ -1,6 +1,6 @@
 import { loginPage } from "../../PartRunner_Pages_/LoginPage"
 const loginobj = new loginPage()
-import LoginData from "../../fixtures/LoginData.json"
+import PartRunnerData from "../../fixtures/PartRunnerData.json"
 
 describe('Login Page Test' , function(){
 
@@ -11,8 +11,8 @@ describe('Login Page Test' , function(){
     it('Login Test' , ()=> {
         loginobj.openURL()
         cy.wait(4000);
-        loginobj.enterUserID(LoginData.Signup.LogID)
-        loginobj.enterPassword(LoginData.Signup.LogPass)
+        loginobj.enterUserID(PartRunnerData.Signup.LogID)
+        loginobj.enterPassword(PartRunnerData.Signup.LogPass)
         loginobj.clickLoginButton()
         loginobj.validation()
     })

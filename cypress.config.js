@@ -9,6 +9,7 @@ module.exports = defineConfig({
      
     },
   },
+  "includeShadowDom":true,
   env: {
     QAURL:'https://qa-pradmin.partrunner.com/en/login'
   }
