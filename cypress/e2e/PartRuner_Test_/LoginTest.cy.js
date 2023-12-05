@@ -15,6 +15,7 @@ describe('Login Page Test' , function(){
         loginobj.enterPassword(PartRunnerData.Signup.LogPass)
         loginobj.clickLoginButton()
         loginobj.validation()
+        
     })
 })
 
