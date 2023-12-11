@@ -29,9 +29,12 @@ jobs:
           name: cypress-videos
           path: cypress/videos
           if-no-files-found: ignore # 
-      - uses: actions/upload-artifact@v3
+
+      - name: PartRunner Test Report
+        if: always() 
+        uses: actions/upload-artifact@v3
         with:
-            name: PartRunner HTML Report
+            name: On-Demand and Login HTML Report
             path: cypress/reports/html
 
 
