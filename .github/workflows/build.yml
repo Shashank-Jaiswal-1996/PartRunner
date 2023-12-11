@@ -13,8 +13,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-           command: npx cypress run
-           browser: chrome
+          command: npx cypress run
+          browser: chrome
       - name: Capturing Screenshots
         uses: actions/upload-artifact@v3
         # add the line below to store screenshots only on failures
@@ -28,25 +28,21 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
-          if-no-files-found: ignore # 
+          if-no-files-found: ignore #
 
       - name: PartRunner Test Report
-        if: always() 
+        if: always()
         uses: actions/upload-artifact@v3
         with:
-            name: On-Demand and Login HTML Report
-            path: cypress/reports/html
+          name: On-Demand and Login HTML Report
+          path: cypress/reports/html
 
       - name: Slack Notification
-        uses: rtCamp/action-slack-notify@v2
+        uses: rtCamp/action-slack-notify@v2.2.1
         env:
-              SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
-              SLACK_ICON: https://github.com/rtCamp.png?size=48
-              SLACK_MESSAGE: 'PartRunner Frontend Automation Report https://github.com/Shashank-Jaiswal-1996/PartRunner/actions/runs/${{github.run_id}}'
-              SLACK_TITLE: PartRunner Web Test
-              # SLACK_USERNAME: rtCamp
-              SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-
-
-
-
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          SLACK_MESSAGE: "PartRunner Frontend Automation Report https://github.com/Shashank-Jaiswal-1996/PartRunner/actions/runs/${{github.run_id}}"
+          SLACK_TITLE: PartRunner Web Test
+          # SLACK_USERNAME: rtCamp
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
