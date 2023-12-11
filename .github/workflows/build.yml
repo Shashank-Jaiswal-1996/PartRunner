@@ -37,6 +37,15 @@ jobs:
             name: On-Demand and Login HTML Report
             path: cypress/reports/html
 
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+              SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+              SLACK_ICON: https://github.com/rtCamp.png?size=48
+              SLACK_MESSAGE: 'PartRunner Frontend Automation Report https://github.com/Shashank-Jaiswal-1996/PartRunner/actions/runs/${{github.run_id}}'
+              SLACK_TITLE: PartRunner Web Test
+              # SLACK_USERNAME: rtCamp
+              SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
 
 
