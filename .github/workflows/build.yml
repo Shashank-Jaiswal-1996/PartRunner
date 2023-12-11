@@ -1,7 +1,5 @@
 name: Cypress Tests
-
 on: push
-
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
@@ -29,16 +27,14 @@ jobs:
           name: cypress-videos
           path: cypress/videos
           if-no-files-found: ignore #
-
       - name: PartRunner Test Report
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: On-Demand and Login HTML Report
           path: cypress/reports/html
-
       - name: Slack Notification
-        uses: rtCamp/action-slack-notify@v2.2.1
+        uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
           SLACK_ICON: https://github.com/rtCamp.png?size=48
