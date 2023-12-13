@@ -191,6 +191,7 @@ export class OndemandServices {
     ClickProductProceed()
     {
         cy.get(this.weblocators.BoxNext).last().click()
+        cy.wait(5000)
     }
 
     EnterPickupOrderNumber(PicOrderNo)
