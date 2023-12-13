@@ -34,7 +34,7 @@ jobs:
           name: On-Demand and Login HTML Report
           path: cypress/reports/html
       - name: Slack Notification
-      if: always()
+        if: always()
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
@@ -43,4 +43,3 @@ jobs:
           SLACK_TITLE: PartRunner Web Test
           # SLACK_USERNAME: rtCamp
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          
