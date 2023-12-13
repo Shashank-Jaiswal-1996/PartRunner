@@ -26,7 +26,7 @@ export class OndemandServices {
         NoOfBox: '.col-md-3 > .form-group > .form-control',
         SelectBoxSize: '.col-md-5 > .form-group > .form-control',
         BoxSubmit: '.d-flex > .btn__pr',
-        BoxNext: '.btn__pr',
+        BoxNext: '.btn__pr > .fa',
         PickupOrderNo:'.pr_card > :nth-child(1) > :nth-child(2) > .form-control',
         PickupName: ':nth-child(1) > .ng-dirty.ng-invalid > .pr_card > :nth-child(2) > :nth-child(1) > .form-control',
         PickupPhone: '#pickup0_contact_phone',
@@ -190,7 +190,7 @@ export class OndemandServices {
 
     ClickProductProceed()
     {
-        cy.get(this.weblocators.BoxNext).last().click()
+        cy.get(this.weblocators.BoxNext).click()
     }
 
     EnterPickupOrderNumber(PicOrderNo)
