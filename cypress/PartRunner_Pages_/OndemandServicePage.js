@@ -1,3 +1,5 @@
+// import { get } from "cypress/types/lodash"
+
 export class OndemandServices {
     weblocators=
     {
@@ -26,14 +28,15 @@ export class OndemandServices {
         BoxSubmit: '.d-flex > .btn__pr',
         BoxNext: '.btn__pr',
         PickupOrderNo:'.pr_card > :nth-child(1) > :nth-child(2) > .form-control',
-        PickupName: ':nth-child(1) > form.ng-pristine > .pr_card > :nth-child(2) > :nth-child(1) > .form-control',
+        PickupName: ':nth-child(1) > .ng-dirty.ng-invalid > .pr_card > :nth-child(2) > :nth-child(1) > .form-control',
         PickupPhone: '#pickup0_contact_phone',
-        SelectPickupLocationType: ':nth-child(1) > form.ng-pristine > .pr_card > :nth-child(2) > :nth-child(3) > .form-control',
-        PickupInstructions: ':nth-child(1) > form.ng-pristine > .pr_card > :nth-child(2) > .mb-0 > .form-control',
+        SelectPickupLocationType: ':nth-child(1) > .ng-dirty.ng-invalid > .pr_card > :nth-child(2) > :nth-child(3) > .form-control',
+        PickupInstructions: ':nth-child(1) > .ng-dirty.ng-invalid > .pr_card > :nth-child(2) > .mb-0 > .form-control',
         DropoffName: 'form.ng-untouched > .pr_card > :nth-child(2) > :nth-child(1) > .form-control',
         DropoffNumber: '#dropoff0_contact_phone',
-        SelectDropoffLocationType: 'form.ng-untouched > .pr_card > :nth-child(2) > :nth-child(3) > .form-control',
-        DropoffInstructions: ':nth-child(1) > form.ng-pristine > .pr_card > :nth-child(2) > .mb-0 > .form-control',
+        SelectDropoffLocationType: ':nth-child(2) > .ng-dirty.ng-invalid > .pr_card > :nth-child(2) > :nth-child(3) > .form-control',
+        DropoffInstructions: '.ng-dirty.ng-invalid > .pr_card > :nth-child(2) > .mb-0 > .form-control',
+        SelectChannelType: '.mb-2 > .row > .form-group > .form-control',
         FinalStepSubmitButton: '.btn__pr'
     }
 
@@ -188,6 +191,68 @@ export class OndemandServices {
     ClickProductProceed()
     {
         cy.get(this.weblocators.BoxNext).last().click()
+    }
+
+    EnterPickupOrderNumber(PicOrderNo)
+    {
+        cy.get(this.weblocators.PickupOrderNo).clear()
+        cy.get(this.weblocators.PickupOrderNo).type(PicOrderNo)
+    }
+
+    EnterPickupName(PicName)
+    {
+        cy.get(this.weblocators.PickupName).clear()
+        cy.get(this.weblocators.PickupName).type(PicName)
+    }
+
+    EnterPickupPhoneNumber(PicPhone)
+    {
+        cy.get(this.weblocators.PickupPhone).clear()
+        cy.get(this.weblocators.PickupPhone).type(PicPhone)
+        cy.wait(2000)
+    }
+
+    SeelectPickupLocationType()
+    {
+        cy.get(this.weblocators.SelectPickupLocationType).select('6' , 'Loading Dock')
+    }
+
+    EnterPickupInstructions(PicIns)
+    {
+        cy.get(this.weblocators.PickupInstructions).type(PicIns)
+    }
+
+    EnterDropOffName(DropName)
+    {
+        cy.get(this.weblocators.DropoffName).clear()
+        cy.get(this.weblocators.DropoffName).type(DropName)
+    }
+
+    EnterDropOffPhoneNumber(DropNumb)
+    {
+        cy.get(this.weblocators.DropoffNumber).clear()
+        cy.get(this.weblocators.DropoffNumber).type(DropNumb)
+        cy.wait(2000)
+    }
+
+    SelectingDropoffLocationType()
+    {
+        cy.get(this.weblocators.SelectDropoffLocationType).select('8' , ' Construction Site')
+    }
+
+    EnterDropoffInstructions(DropInstruction)
+    {
+        cy.get(this.weblocators.DropoffInstructions).type(DropInstruction)
+    }
+
+    SelectingChannelType()
+    {
+        cy.get(this.weblocators.SelectChannelType).select('3' , ' Offline - Chat')
+    }
+
+    ClickFinalSubmitButton()
+    {
+        cy.get(this.weblocators.FinalStepSubmitButton).click()
     }
 
     
