@@ -1,4 +1,3 @@
-// import { get } from "cypress/types/lodash"
 
 export class OndemandServices {
     weblocators=
