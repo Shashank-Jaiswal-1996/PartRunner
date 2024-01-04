@@ -69,7 +69,7 @@ export class CreateDedicatedAgreement{
     SelectVehicleType(Type,SubType)
     {
         cy.get(this.weblocators.VehicleType).click({force:true})
-        cy.contains(Type).click()
+        cy.contains(Type).click({force:true})
         cy.contains(SubType).click()
     }
 
