@@ -79,4 +79,5 @@ export class OndemandTrip {
         cy.get(this.weblocators.CreateTripFinal).contains('Create').click()
         
     }
+    
 }
