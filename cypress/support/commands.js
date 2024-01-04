@@ -29,6 +29,7 @@
 
 // type definitions for Cypress object "cy"
 /// <reference types="cypress" />
+/// <reference types="cypress-xpath" />
 
 Cypress.Commands.add('login' , (email , Password)=>{
     cy.visit(Cypress.env('StagURL'))

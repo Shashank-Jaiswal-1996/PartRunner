@@ -2,8 +2,6 @@
 export class CreateDedicatedAgreement{
     weblocators=
     {
-        // Dedicated:'Dedicated',
-        // Agreement:'Agreements',
         ProjectButton:'Projects',
         AddAgreementButton:'.btn.add_service_button.d-flex',
         CompantName:'#typeahead-basic',
@@ -31,18 +29,6 @@ export class CreateDedicatedAgreement{
     {
         cy.contains(this.weblocators.ProjectButton).click()
     }
-
-    // ClickOnDedicatedButton()
-    // {
-    //     cy.contains(this.weblocators.Dedicated).click()
-    // }
-
-    // ClickOnAgreementButton()
-    // {
-    //     cy.contains(this.weblocators.Agreement).click()
-    //     cy.wait(2000)
-    //     cy.contains("Dedicated SErvice Agreements" , {matchCase:false}).should('be.visible')
-    // }
 
     ClickonAddAgreementButton()
     {

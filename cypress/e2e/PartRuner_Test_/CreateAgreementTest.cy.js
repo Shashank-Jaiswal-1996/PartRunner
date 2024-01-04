@@ -9,7 +9,6 @@ describe('Create Dedicated Agreement flow' , ()=>{
 
     it('Create Agreement  Test' , ()=>{
         DedAgreeobj.ClickonProjectButton()
-        // DedAgreeobj.ClickOnAgreementButton()
         DedAgreeobj.ClickonAddAgreementButton()
         DedAgreeobj.EnterCompany(PartRunnerData.CreateAgreement.CompanySearchByName)
         DedAgreeobj.SelectCompany(PartRunnerData.CreateAgreement.CompaName)

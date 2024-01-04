@@ -8,7 +8,7 @@ describe('OnDemand Trip Flow' , ()=>{
         cy.login(PartRunnerData.Signup.LogID ,PartRunnerData.Signup.LogPass )
     })
     it('OnDemandTrip Test' , ()=>{
-        OnDemTripObj.ClickOnRoutes()
+        OnDemTripObj.ClickOnMatching()
         OnDemTripObj.ClickOnCreateTrip()
         OnDemTripObj.ClickOnHaveaDriver()
         OnDemTripObj.SearchingDriver()

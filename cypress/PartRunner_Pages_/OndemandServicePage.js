@@ -2,7 +2,6 @@
 export class OndemandServices {
     weblocators=
     {
-        Service:'.active-child',
         RequestDelivery:'  .btn.btn-black.request-delivery',
         CompanyName: '#typeahead-basic',
         SelectCom: '#ngb-typeahead-0-0',
@@ -39,12 +38,6 @@ export class OndemandServices {
         FinalStepSubmitButton: '.btn__pr'
     }
 
-    ClickOnService()
-    {
-        cy.get(this.weblocators.Service).click()
-        cy.wait(5000)
-    }
-
     ClickOnRequestDelivery()
     {
         cy.get(this.weblocators.RequestDelivery).click()
@@ -53,7 +46,7 @@ export class OndemandServices {
     SelectCompany(comName)
     {
         cy.get(this.weblocators.CompanyName).type(comName)
-        cy.get(this.weblocators.SelectCom).contains('new mexico').click()
+        cy.get(this.weblocators.SelectCom).contains('mexicostage').click()
         // cy.get(this.weblocators.SelectCom).type('{enter}')
     }
 
