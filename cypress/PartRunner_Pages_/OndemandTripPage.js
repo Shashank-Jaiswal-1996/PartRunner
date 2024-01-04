@@ -54,7 +54,6 @@ export class OndemandTrip {
 
     SelectingStartLocation()
     {
-        // cy.get(this.weblocators.SelectStartLocation).contains(' 400 N Michigan Ave, Chicago, IL 60611, USA ').click()
         cy.get(this.weblocators.SelectStartLocation).scrollTo('bottom').contains('78557').click()
     }
 
