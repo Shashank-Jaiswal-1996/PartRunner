@@ -31,10 +31,10 @@
 /// <reference types="cypress" />
 
 Cypress.Commands.add('login' , (email , Password)=>{
-    cy.visit(Cypress.env('QAURL'))
+    cy.visit(Cypress.env('StagURL'))
     cy.wait(4000)
     cy.get('.mb-3 > .form-control').type(email)
-    cy.get('.position-relative > .form-control').type(Password)
+    cy.get('.position-relative > .form-control').type(Password , {log:false})
     cy.get('.d-flex > .btn').click()
     cy.wait(5000)
 })

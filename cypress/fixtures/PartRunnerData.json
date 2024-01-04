@@ -1,7 +1,7 @@
 {
     "Signup":
     {
-    "LogID":"t.aleti",
+    "LogID":"staging.mexico.country.admin@partrunner.com",
     "LogPass": "Partrunner7"
     },
 
@@ -22,6 +22,23 @@
         "DropOffPhoneNumber": "2233445566",
         "DropOffInstrctions": "Instruction is not Required"
 
+    },
+    "CreateAgreement":
+    {
+        "CompanySearchByName":"mexico",
+        "CompaName":"mexicostage",
+        "Branch":"Mexico City Default Branch",
+        "User":"mexicostage",
+        "TypeSelectPickupAddress":"2 2A CDA. MELCHOR OCAMPO, CRSITO REY, XOCHIMILCO, CIUDAD DE MEXICO, CIUDAD DE MEXICO, 16710",
+        "PickupVaidation":"Ocampo",
+        "VehicleType":"Iron Trucks",
+        "VehicleSubType":"3.5 Tons",
+        "NumberOfVehicles":"1",
+        "AverageDistance":"100",
+        "StartDate":"4",
+        "StartYear":"2024",
+        "StartMonth":"May"
+        
     }
 
 }

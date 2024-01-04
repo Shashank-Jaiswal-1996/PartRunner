@@ -11,6 +11,7 @@ module.exports = defineConfig({
   },
   "includeShadowDom":true,
   env: {
-    QAURL:'https://qa-pradmin.partrunner.com/en/login'
+    QAURL:'https://qa-pradmin.partrunner.com/en/login',
+    StagURL:'https://staging-pradmin.partrunner.com/en/login'
   }
 });
