@@ -9,7 +9,7 @@ weblocators=
 
 openURL()
 {
-    cy.visit(Cypress.env('QAURL'))
+    cy.visit(Cypress.env('StagURL'))
 }
 
 enterUserID(ID)
