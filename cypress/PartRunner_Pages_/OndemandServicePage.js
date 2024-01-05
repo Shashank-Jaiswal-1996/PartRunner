@@ -69,6 +69,7 @@ export class OndemandServices {
     EnterPickupLocation(PickupLoc)
     {
         cy.get(this.weblocators.EntterPickupLocation).type(PickupLoc)
+        cy.wait(3000)
     }
 
     SelectPickupLocation(Containss)
