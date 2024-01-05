@@ -70,7 +70,7 @@ export class OndemandTrip {
 
     ClaculatingTrip()
     {
-        cy.scrollIntoView(this.weblocators.ClaculateTrip)
+        cy.scrollTo('top' , { easing: 'linear' })
         cy.get(this.weblocators.ClaculateTrip).click({force:true})
         cy.wait(20000)
     }
