@@ -1,23 +1,20 @@
 {
-    "ValidData":
-    {
-        "PhoneNumber":"1519413333",
-        "FullName":"shashank jaiswal2",
-        "SourceValue":"google",
-        "SourceOption":"Google",
-        "PrAdminValue":"2: 51",
-        "PrAdminOPtion":"Ana",
-        "CityValue":"Jalisco",
-        "CityOption":"Jalisco",
-        "VehicleValue":"pickup-or-van",
-        "VehicleOption":"pickup-or-van",
-        "VehSubValue":"van",
-        "VehicleSubOption":"Van Mediana",
-        "VehicleYears":"1991"
+    "ValidData": {
+        "PhoneNumber": "2518413333",
+        "FullName": "shashank jaiswal3",
+        "SourceValue": "google",
+        "SourceOption": "Google",
+        "PrAdminValue": "2: 51",
+        "PrAdminOPtion": "Ana",
+        "CityValue": "Jalisco",
+        "CityOption": "Jalisco",
+        "VehicleValue": "pickup-or-van",
+        "VehicleOption": "pickup-or-van",
+        "VehSubValue": "van",
+        "VehicleSubOption": "Van Mediana",
+        "VehicleYears": "1991"
     },
-
-    "InvalidData":
-    {
-        "PhoneNumber":"11564133"
+    "InvalidData": {
+        "PhoneNumber": "11564133"
     }
 }
