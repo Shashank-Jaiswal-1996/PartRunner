@@ -4,18 +4,29 @@ import PartRunnerData from "../../fixtures/PartRunnerData.json"
 
 describe('Login Page Test' , function(){
 
-    // before(()=>{
-    //     cy.login(LoginData.Signup.LogID ,LoginData.Signup.LogPass )
-    // })
-
     it('Login Test' , ()=> {
         loginobj.openURL()
         cy.wait(4000);
         loginobj.enterUserID(PartRunnerData.Signup.LogID)
         loginobj.enterPassword(PartRunnerData.Signup.LogPass)
         loginobj.clickLoginButton()
-        loginobj.validation()
-        
+        loginobj.PositiveCredvalidation()  
+    })
+
+        it('Login with wrong Creds' , ()=> {
+        loginobj.openURL()
+        cy.wait(4000);
+        loginobj.enterUserID("Shashank@partrunner.com")
+        loginobj.enterPassword("SHashank@1996")
+        loginobj.clickLoginButton()
+        loginobj.NegativeCredVaidation() 
+    })
+
+    it('Login without any creds' , ()=> {
+        loginobj.openURL()
+        cy.wait(4000);
+        loginobj.clickLoginButton()
+        loginobj.EmptyValidation()
     })
 })
 
