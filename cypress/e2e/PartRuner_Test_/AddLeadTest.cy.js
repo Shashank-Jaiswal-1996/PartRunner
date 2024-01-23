@@ -9,6 +9,7 @@ describe("Add Lead flow Testing ", () => {
     beforeEach(() => {
         cy.login(PartRunnerData.Signup.LogID, PartRunnerData.Signup.LogPass)
     })
+
     it("Checking all elements are Present on Page 01", () => {
         AddLeadobj.ClickOnAquisition()
         AddLeadobj.ClickOnAddLead()
@@ -119,5 +120,12 @@ describe("Add Lead flow Testing ", () => {
         AddLeadobj.ClickOnVideo()
         AddLeadobj.ClickOnNextButton()
         AddLeadobj.ClickonYesButton()
+    })
+
+    it("Delete Lead", ()=>{
+        AddLeadobj.ClickOnAquisition()
+        AddLeadobj.ClickonGeneratedLead()
+        AddLeadobj.HoverOverDots()
+        AddLeadobj.DeleteLead()
     })
 })

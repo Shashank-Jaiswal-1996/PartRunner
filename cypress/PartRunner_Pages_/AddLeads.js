@@ -25,6 +25,10 @@ export class Addleads {
             VideoButton: '//*[text()=" Video "]',
             GoogleMeetButton: '//*[text()=" Google Meet "]',
             ConfirmYesButton: '//*[@class="btn__pr mx-2 ls__none"]',
+            DeleteButton:'.d-flex.align-items-center.delete',
+            DeleteConfirmButton:'.btn__pr__secondary',
+            LeadDetailsCloseButton:'//*[@class="icon-close-btn"]',
+            QuaifiedLeadButton:'//*[text()=" Qualified Leads "]',
 
 
             //Error Messages and Toasters
@@ -169,9 +173,23 @@ export class Addleads {
 
     ClickonYesButton() {
         cy.xpath(this.weblocator.ConfirmYesButton).click()
-        // cy.waitUntil(()=>{
-        //     cy.contains(' Qualified lead created successfully ',{matchCase:true})
-        // })
+    }
+
+    DeleteLead()
+    {
+        cy.get(this.weblocator.DeleteButton).click()
+        cy.get(this.weblocator.DeleteConfirmButton).eq(0).click() 
+    }
+
+    DetailsClose()
+    {
+        cy.xpath(this.weblocator.LeadDetailsCloseButton).click()
+    }
+
+    ClickOnQualifiedLeadButton()
+    {
+        cy.xpath(this.weblocator.QuaifiedLeadButton).click()
+        cy.wait(6000)
     }
 
 }
