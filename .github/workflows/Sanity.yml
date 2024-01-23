@@ -9,7 +9,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          spec: cypress\e2e\PartRuner_Test_\LoginTest.cy.js
+          spec: cypress/e2e/PartRuner_Test_/LoginTest.cy.js
           # command: npm cypress run --spec cypress/e2e/PartRuner_Test_/LoginTest.cy.js
           browser: chrome
       - name: Capturing Screenshots
@@ -42,42 +42,3 @@ jobs:
           SLACK_TITLE: PartRunner Web Test
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
-#   job2:
-#     runs-on: ubuntu-22.04
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v4
-#       - name: Cypress run
-#         uses: cypress-io/github-action@v6
-#         with:
-#           command: npx cypress run --spec "cypress\e2e\PartRuner_Test_\OnDemandTest.cy.js"
-#           browser: chrome
-#       - name: Capturing Screenshots
-#         uses: actions/upload-artifact@v3
-#         if: failure()
-#         with:
-#           name: cypress-screenshots
-#           path: cypress/screenshots
-#           if-no-files-found: ignore
-#       - name: Capturing Videos
-#         uses: actions/upload-artifact@v3
-#         if: always()
-#         with:
-#           name: cypress-videos
-#           path: cypress/videos
-#           if-no-files-found: ignore
-#       - name: PartRunner Test Report
-#         if: always()
-#         uses: actions/upload-artifact@v3
-#         with:
-#           name: On-Demand and Login HTML Report
-#           path: cypress/reports/html
-#       - name: Slack Notification
-#         if: always()
-#         uses: rtCamp/action-slack-notify@v2
-#         env:
-#           SLACK_COLOR: ${{ job.status }}
-#           SLACK_ICON: https://github.com/rtCamp.png?size=48
-#           SLACK_MESSAGE: "PartRunner Frontend Automation Report https://github.com/Shashank-Jaiswal-1996/PartRunner/actions/runs/${{github.run_id}}"
-#           SLACK_TITLE: PartRunner Web Test
-#           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
