@@ -2,14 +2,14 @@ name: Sanity Test
 on: workflow_dispatch
 jobs:
   job1:
-    runs-on: windows-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          command: npx cypress run --spec "cypress/e2e/PartRuner_Test_/LoginTest.cy.js"
+          command: npx cypress run --spec cypress\e2e\PartRuner_Test_\LoginTest.cy.js
           browser: chrome
       - name: Capturing Screenshots
         uses: actions/upload-artifact@v3
