@@ -9,7 +9,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          command: cypress run --spec cypress/e2e/PartRuner_Test_/LoginTest.cy.js
+          command: npm cypress run --spec cypress/e2e/PartRuner_Test_/LoginTest.cy.js
           browser: chrome
       - name: Capturing Screenshots
         uses: actions/upload-artifact@v3
