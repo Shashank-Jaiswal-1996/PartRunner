@@ -1,44 +1,38 @@
 {
-    "Signup":
-    {
-    "LogID":"staging.super.admin@partrunner.com",
+  "Signup": {
+    "LogID": "staging.super.admin@partrunner.com",
     "LogPass": "Partrunner7"
-    },
+  },
 
-    "OnDemand":
-    {
-        "CompanyName":"mexicostage",
-        "BranchName": "Mexico City Default Branch",
-        "Users": "mexicostage",
-        "PickupLocation": "2500 Avenida Insurgentes, 1, Monterrey, N.L., 64620",
-        "PickupLocContains": "Insurgentes",
-        "DropOffLocation": "3278 Avenida Canal de Garay, 2, Ciudad de México, CDMX, 09910",
-        "DropOffLocContains": "Tulyehualco",
-        "PickupOrderNumber" : "1",
-        "PickuName": "Shashank",
-        "PickupPhoneNumber": "1221233223",
-        "PickupInstructions": "Instruction is Not Required",
-        "DropOffName": "Jaiswal",
-        "DropOffPhoneNumber": "2233445566",
-        "DropOffInstrctions": "Instruction is not Required"
-
-    },
-    "CreateAgreement":
-    {
-        "CompanySearchByName":"mexico",
-        "CompaName":"mexicostage",
-        "Branch":"Mexico City Default Branch",
-        "User":"mexicostage",
-        "TypeSelectPickupAddress":"2 2A CDA. MELCHOR OCAMPO, CRSITO REY, XOCHIMILCO, CIUDAD DE MEXICO, CIUDAD DE MEXICO, 16710",
-        "PickupVaidation":"Ocampo",
-        "VehicleType":"Iron Trucks",
-        "VehicleSubType":"3.5 Tons",
-        "NumberOfVehicles":"1",
-        "AverageDistance":"100",
-        "StartDate":"4",
-        "StartYear":"2024",
-        "StartMonth":"May"
-        
-    }
-
+  "OnDemand": {
+    "CompanyName": "mexicostage",
+    "BranchName": "Mexico City Default Branch",
+    "Users": "mexicostage",
+    "PickupLocation": "2500 Avenida Insurgentes, 1, Monterrey, N.L., 64620",
+    "PickupLocContains": "Insurgentes",
+    "DropOffLocation": "3278 Avenida Canal de Garay, 2, Ciudad de México, CDMX, 09910",
+    "DropOffLocContains": "Tulyehualco",
+    "PickupOrderNumber": "1",
+    "PickuName": "Shashank",
+    "PickupPhoneNumber": "1221233223",
+    "PickupInstructions": "Instruction is Not Required",
+    "DropOffName": "Jaiswal",
+    "DropOffPhoneNumber": "2233445566",
+    "DropOffInstrctions": "Instruction is not Required"
+  },
+  "CreateAgreement": {
+    "CompanySearchByName": "mexico",
+    "CompaName": "mexicostage",
+    "Branch": "Mexico City Default Branch",
+    "User": "mexicostage",
+    "TypeSelectPickupAddress": "2 2A CDA. MELCHOR OCAMPO, CRSITO REY, XOCHIMILCO, CIUDAD DE MEXICO, CIUDAD DE MEXICO, 16710",
+    "PickupVaidation": "Ocampo",
+    "VehicleType": "Iron Trucks",
+    "VehicleSubType": "3.5 Tons",
+    "NumberOfVehicles": "1",
+    "AverageDistance": "100",
+    "StartDate": "4",
+    "StartYear": "2024",
+    "StartMonth": "May"
+  }
 }

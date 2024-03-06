@@ -83,7 +83,4 @@ export class CreateDedicatedAgreement {
     ClickOnSubmitButton() {
         cy.get(this.weblocators.SubmitButton).click()
     }
-
-
-
 }
