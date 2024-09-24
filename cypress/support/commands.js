@@ -28,11 +28,30 @@
 /// <reference types="cypress" />
 /// <reference types="cypress-xpath" />
 
-Cypress.Commands.add('login' , (email , Password)=>{
-    cy.visit(Cypress.env('StagURL'))
+Cypress.Commands.add('login', (email, Password) => {
+    cy.visit(Cypress.env('QAURL'))
     cy.wait(4000)
     cy.get('.mb-3 > .form-control').type(email)
-    cy.get('.position-relative > .form-control').type(Password , {log:false})
+    cy.get('.position-relative > .form-control').type(Password, { log: false })
     cy.get('.d-flex > .btn').click()
     cy.wait(5000)
 })
+
+
+
+// cy.get('a').each(($link)=>{
+//     const href = $link.prop('href');
+
+//     if(href){
+//         cy.request({
+//             failOnStatusCode:false
+//         }).then(()=>{
+//             if(Response.status>=400){
+//                 console.log("Broken link")
+//             }
+//             else{
+//                 console.log("Non-Broken Link")
+//             }
+//         })
+//     }
+// })
